@@ -2,18 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0369A1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="INTERY">
   <title>INTERY d.o.o. | Industrial Electrical Installation Experts</title>
   <meta name="description" content="INTERY d.o.o. — Leading provider of electrical and mechanical installation services for automotive, energy, and industrial sectors across Europe. 70+ certified specialists.">
   <meta property="og:title" content="INTERY d.o.o. | Industrial Electrical Installation Experts">
   <meta property="og:description" content="Electrical and mechanical installation experts for robotic lines, conveyor systems, and battery assembly across Europe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.intery-si.com">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <meta property="og:image" content="https://www.intery-si.com/img/intery-og-image.png">
+  <!-- Favicon & Web App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="https://www.intery-si.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cookies.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,11 +54,7 @@
 <nav class="navbar-container" id="navbar">
   <div class="navbar">
     <a href="#home" class="navbar-brand">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-        </svg>
-      </div>
+      <img src="img/logo-transparent.png" alt="INTERY" class="navbar-logo-img">
       <span class="brand-text">INTERY</span>
     </a>
 
@@ -54,20 +63,28 @@
       <li class="nav-item"><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
       <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
       <li class="nav-item"><a href="#references" class="nav-link" data-i18n="nav.references">References</a></li>
+      <li class="nav-item"><a href="careers.html" class="nav-link" data-i18n="nav.careers">Careers</a></li>
       <li class="nav-item"><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
       <li class="nav-item">
         <a href="tel:+38640122349" class="nav-phone">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.75-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          +386 40 122 349
-        </a>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.75-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="nav-phone-num">+386 40 122 349</span></a>
       </li>
       <li class="nav-item"><a href="#contact" class="cta-button" data-i18n="nav.quote">Get a Quote</a></li>
     </ul>
 
-    <div class="lang-switcher">
-      <button class="lang-btn active" data-lang="en">EN</button>
-      <button class="lang-btn" data-lang="sl">SL</button>
-      <button class="lang-btn" data-lang="de">DE</button>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" id="langDropdownLabel">English EN</span>
+        <svg class="lang-arrow" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+        <button class="lang-option active" data-lang="en" role="option">English <span>EN</span></button>
+        <button class="lang-option" data-lang="sl" role="option">Slovenščina <span>SL</span></button>
+        <button class="lang-option" data-lang="de" role="option">Deutsch <span>DE</span></button>
+        <button class="lang-option" data-lang="pl" role="option">Polski <span>PL</span></button>
+        <button class="lang-option" data-lang="es" role="option">Español <span>ES</span></button>
+        <button class="lang-option" data-lang="sk" role="option">Slovenčina <span>SK</span></button>
+      </div>
     </div>
 
     <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
@@ -82,9 +99,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-header">
     <a href="#home" class="mobile-menu-brand">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
+      <img src="img/logo-transparent.png" alt="INTERY" class="navbar-logo-img">
       <span class="brand-text">INTERY</span>
     </a>
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close">×</button>
@@ -94,12 +109,22 @@
     <li class="mobile-menu-item"><a href="#services" class="mobile-menu-link" data-i18n="nav.services">Services</a></li>
     <li class="mobile-menu-item"><a href="#about" class="mobile-menu-link" data-i18n="nav.about">About</a></li>
     <li class="mobile-menu-item"><a href="#references" class="mobile-menu-link" data-i18n="nav.references">References</a></li>
+    <li class="mobile-menu-item"><a href="careers.html" class="mobile-menu-link" data-i18n="nav.careers">Careers</a></li>
     <li class="mobile-menu-item"><a href="#contact" class="mobile-menu-link" data-i18n="nav.contact">Contact</a></li>
   </ul>
-  <div class="mobile-lang-switcher">
-    <button class="lang-btn active" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="sl">SL</button>
-    <button class="lang-btn" data-lang="de">DE</button>
+  <div class="mobile-lang-switcher" id="mobileLangSwitcher">
+    <button class="lang-dropdown-btn" id="mobileLangDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+      <span class="lang-dropdown-label" id="mobileLangDropdownLabel">English EN</span>
+      <svg class="lang-arrow" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="lang-dropdown-menu" id="mobileLangDropdownMenu" role="listbox">
+      <button class="lang-option active" data-lang="en" role="option">English <span>EN</span></button>
+      <button class="lang-option" data-lang="sl" role="option">Slovenščina <span>SL</span></button>
+      <button class="lang-option" data-lang="de" role="option">Deutsch <span>DE</span></button>
+      <button class="lang-option" data-lang="pl" role="option">Polski <span>PL</span></button>
+      <button class="lang-option" data-lang="es" role="option">Español <span>ES</span></button>
+      <button class="lang-option" data-lang="sk" role="option">Slovenčina <span>SK</span></button>
+    </div>
   </div>
   <div class="mobile-cta">
     <a href="#contact" class="mobile-cta-button" data-i18n="nav.mobile_quote">Get a Quote</a>
@@ -151,9 +176,9 @@
     <div class="hero-stats-bar">
       <div class="hero-stat"><strong>70+</strong><span data-i18n="stats.specialists">Certified Specialists</span></div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat"><strong>38+</strong><span data-i18n="stats.projects">Completed Projects</span></div>
+      <div class="hero-stat"><strong>400+</strong><span data-i18n="stats.projects">Completed Projects</span></div>
       <div class="hero-stat-divider"></div>
-      <div class="hero-stat"><strong>18+</strong><span data-i18n="stats.clients">Clients Worldwide</span></div>
+      <div class="hero-stat"><strong>50+</strong><span data-i18n="stats.clients">Clients Worldwide</span></div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat"><strong>9</strong><span data-i18n="stats.categories">Service Categories</span></div>
     </div>
@@ -174,7 +199,7 @@
     </div>
     <div class="services-grid">
 
-      <div class="service-card">
+      <a href="services/robotic-line-installation.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/1f6a9136-be19-11f0-b3c3-0242ac110002-jpg-regular_image.jpeg" alt="Electrical installation of robotic lines" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -184,11 +209,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s01.title">Robotic Line Installation</h3>
           <p data-i18n="s01.desc">Expert electrical setup for robotic welding and assembly stations in automotive manufacturing.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/conveyor-lines-warehouses.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/9a8c4afd-be1c-11f0-8efd-0242ac110002-jpg-regular_image.jpeg" alt="Conveyor line and warehouse electrical installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -198,11 +223,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s02.title">Conveyor Lines & Warehouses</h3>
           <p data-i18n="s02.desc">Seamless electrical installation for conveyor lines and warehouse intralogistics systems.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/control-cabinet-wiring.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/1f43b331-be19-11f0-8d54-0242ac110002-jpg-regular_image.jpeg" alt="Control cabinet wiring" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -212,11 +237,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s03.title">Control Cabinet Wiring</h3>
           <p data-i18n="s03.desc">Custom wiring solutions for industrial control cabinets with full documentation and testing.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/battery-assembly-lines.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/073be567-be1d-11f0-9bda-0242ac110002-jpg-regular_image.jpeg" alt="Battery assembly line installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -226,11 +251,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s04.title">Battery Assembly Lines</h3>
           <p data-i18n="s04.desc">Comprehensive electrical and mechanical installation for EV battery assembly infrastructure.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/power-plant-installation.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/54e5bd5c-be1d-11f0-b8cd-0242ac110002-jpg-regular_image.jpeg" alt="Power plant electrical installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -240,11 +265,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s05.title">Power Plant Installation</h3>
           <p data-i18n="s05.desc">Specialized high-voltage electrical installation for power generation and distribution facilities.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/photovoltaic-installation.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/862a9e5b-be1a-11f0-814c-0242ac110002-jpg-regular_image.jpeg" alt="Photovoltaic solar installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -254,11 +279,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s06.title">Photovoltaic Installation</h3>
           <p data-i18n="s06.desc">Industrial-scale solar panel installation for sustainable energy and reduced operational costs.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/fire-protection-systems.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/5094c0d0-be26-11f0-a7a0-0242ac110002-jpg-regular_image.jpeg" alt="Fire protection system installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -268,11 +293,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s07.title">Fire Protection Systems</h3>
           <p data-i18n="s07.desc">Expert installation of industrial fire detection and suppression systems for full safety compliance.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/process-solutions.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/40bc4273-be27-11f0-adcb-0242ac110002-jpg-regular_image.jpeg" alt="Process solutions services" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -282,11 +307,11 @@
         <div class="service-card-body">
           <h3 data-i18n="s08.title">Process Solutions</h3>
           <p data-i18n="s08.desc">Comprehensive process engineering for petrochemical and industrial operational efficiency.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
-      <div class="service-card">
+      <a href="services/welding-workforce.html" class="service-card">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/6227286c-c6d3-11f0-adda-0242ac110002-jpg-regular_image.jpeg" alt="Welding workforce supply" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -296,9 +321,9 @@
         <div class="service-card-body">
           <h3 data-i18n="s09.title">Welding Workforce</h3>
           <p data-i18n="s09.desc">Reliable, certified welders supplied for industrial and manufacturing projects across Europe.</p>
-          <a href="#contact" class="service-link"><span data-i18n="service.inquire">Inquire</span> <span>→</span></a>
+          <span class="service-link"><span data-i18n="service.learn">Learn More</span> <span>→</span></span>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -310,9 +335,10 @@
     <div class="about-grid">
 
       <div class="about-left">
-        <span class="section-tag tag-green" data-i18n="about.tag">Why Choose Us</span>
-        <h2 class="section-title title-light" data-i18n="about.title">Why Partner<br>With <em>INTERY?</em></h2>
-        <p class="about-desc" data-i18n="about.desc">We combine 70+ certified specialists with a customer-centric approach — ensuring timely delivery, operational reliability, and long-term performance on every project.</p>
+        <span class="section-tag tag-green" data-i18n="about.tag">Your Expert Partner</span>
+        <h2 class="section-title title-light" data-i18n="about.title">Leading Electrical<br><em>Installations</em></h2>
+        <p class="about-desc" data-i18n="about.desc">INTERY d.o.o. is a trusted provider of high-quality electrical and mechanical installation services for the automotive, energy, and industrial sectors. With a strong team of over 70 certified specialists, we deliver technically advanced, safe, and efficient solutions that support modern production environments and large-scale industrial operations.</p>
+        <p class="about-desc" style="margin-top:1rem;" data-i18n="about.desc2">Our expertise spans robotic-line installations, conveyor and intralogistics systems, battery-assembly lines, high-voltage power systems, control-cabinet wiring, fire-protection systems, and photovoltaic installations — all executed with strict adherence to industry regulations, supported by VDE measurements, E/A testing, and proven quality-assurance processes.</p>
         <a href="#contact" class="btn btn-primary" style="margin-top:2rem;" data-i18n="about.btn">Start a Project</a>
 
         <div class="cert-badges">
@@ -357,7 +383,7 @@
             </div>
             <div class="usp-content">
               <h4 data-i18n="usp03.title">Industry-Proven Reliability</h4>
-              <p data-i18n="usp03.desc">Trusted by 18+ clients worldwide including leaders in automotive, energy, and petrochemical industries.</p>
+              <p data-i18n="usp03.desc">Trusted by 50+ clients worldwide including leaders in automotive, energy, and petrochemical industries.</p>
             </div>
           </div>
           <div class="usp-item">
@@ -394,11 +420,11 @@
         <p data-i18n="stats.specialists">Certified Specialists</p>
       </div>
       <div class="stat-item">
-        <div class="stat-number"><span class="counter" data-target="38">0</span><span class="stat-plus">+</span></div>
+        <div class="stat-number"><span class="counter" data-target="400">0</span><span class="stat-plus">+</span></div>
         <p data-i18n="stats.projects">Completed Projects</p>
       </div>
       <div class="stat-item">
-        <div class="stat-number"><span class="counter" data-target="18">0</span><span class="stat-plus">+</span></div>
+        <div class="stat-number"><span class="counter" data-target="50">0</span><span class="stat-plus">+</span></div>
         <p data-i18n="stats.clients">Clients Worldwide</p>
       </div>
       <div class="stat-item">
@@ -421,52 +447,57 @@
 
       <div class="reference-card">
         <div class="ref-header">
-          <span class="ref-client">ThyssenKrupp</span>
+          <span class="ref-client">Tesla</span>
+          <span class="ref-location">Austin, Texas — USA</span>
           <span class="ref-year">2024</span>
         </div>
-        <h3 data-i18n="r01.title">Robotic Line Electrical Installation</h3>
-        <p data-i18n="r01.desc">Full electrical installation of robotic welding and assembly stations for a major automotive production line upgrade.</p>
-        <div class="ref-tags"><span>Robotics</span><span>Automotive</span></div>
+        <h3>Battery Assembly Line Installation</h3>
+        <p>Complete electrical and mechanical installation of EV battery assembly infrastructure for Tesla's North American production expansion — delivering precision automation for next-generation battery cell integration.</p>
+        <div class="ref-tags"><span>Battery</span><span>Energy</span><span>USA</span></div>
       </div>
 
       <div class="reference-card">
         <div class="ref-header">
-          <span class="ref-client">FFT</span>
+          <span class="ref-client">BMW</span>
+          <span class="ref-location">Regensburg, Germany</span>
           <span class="ref-year">2024</span>
         </div>
-        <h3 data-i18n="r02.title">Conveyor & Intralogistics System</h3>
-        <p data-i18n="r02.desc">Electrical wiring and commissioning for a complete conveyor and warehouse intralogistics installation project.</p>
-        <div class="ref-tags"><span>Conveyor</span><span>Industrial</span></div>
+        <h3>Robotic Line Electrical Installation</h3>
+        <p>Full electrical setup for advanced robotic welding and assembly lines serving BMW's German production network — supporting multiple manufacturing facilities across Bavaria with precision automotive automation.</p>
+        <div class="ref-tags"><span>Robotics</span><span>Automotive</span><span>EU</span></div>
       </div>
 
       <div class="reference-card">
         <div class="ref-header">
-          <span class="ref-client">Solvation</span>
-          <span class="ref-year">2023</span>
+          <span class="ref-client">Volkswagen</span>
+          <span class="ref-location">Wolfsburg, Germany</span>
+          <span class="ref-year">2024</span>
         </div>
-        <h3 data-i18n="r03.title">Battery Assembly Line Installation</h3>
-        <p data-i18n="r03.desc">Comprehensive electrical and mechanical installation of EV battery assembly line infrastructure for energy sector client.</p>
-        <div class="ref-tags"><span>Battery</span><span>Energy</span></div>
+        <h3>Control Cabinet Wiring & Process Solutions</h3>
+        <p>Custom control cabinet design, wiring, and process automation solutions for VW's flagship German manufacturing hub — delivering comprehensive electrical infrastructure for multi-station production environments.</p>
+        <div class="ref-tags"><span>Wiring</span><span>Process</span><span>EU</span></div>
       </div>
 
       <div class="reference-card">
         <div class="ref-header">
-          <span class="ref-client">INPRO</span>
+          <span class="ref-client">Mercedes-Benz</span>
+          <span class="ref-location">Sindelfingen, Germany</span>
           <span class="ref-year">2023</span>
         </div>
-        <h3 data-i18n="r04.title">Control Cabinet Wiring Solutions</h3>
-        <p data-i18n="r04.desc">Custom control cabinet design, wiring, and documentation for a multi-station automated production environment.</p>
-        <div class="ref-tags"><span>Wiring</span><span>Automation</span></div>
+        <h3>Conveyor Lines & Warehouse Intralogistics</h3>
+        <p>Seamless electrical installation for conveyor systems and warehouse intralogistics across Mercedes-Benz's premium manufacturing facilities — enabling efficient material flow for high-precision automotive assembly.</p>
+        <div class="ref-tags"><span>Conveyor</span><span>Logistics</span><span>EU</span></div>
       </div>
 
       <div class="reference-card">
         <div class="ref-header">
-          <span class="ref-client">F.EE</span>
+          <span class="ref-client">CATL</span>
+          <span class="ref-location">Arnstadt, Germany</span>
           <span class="ref-year">2023</span>
         </div>
-        <h3 data-i18n="r05.title">Power Plant Electrical Installation</h3>
-        <p data-i18n="r05.desc">High-voltage electrical installation with VDE measurements and complete technical documentation for power generation client.</p>
-        <div class="ref-tags"><span>Power</span><span>Energy</span></div>
+        <h3>Power Systems & Battery Manufacturing</h3>
+        <p>High-voltage electrical installation and comprehensive power infrastructure for CATL's European battery manufacturing — delivering industrial-scale electrical systems for global EV supply chain operations.</p>
+        <div class="ref-tags"><span>Power</span><span>Battery</span><span>EU</span></div>
       </div>
 
       <div class="reference-card ref-cta-card">
@@ -535,33 +566,89 @@
   </div>
   <div class="marquee-wrapper">
     <div class="marquee-track">
-      <span class="client-name">ThyssenKrupp</span>
+      <img class="client-logo" src="img/clients/139-1392578_audi-logo.png" alt="Audi">
       <span class="client-dot">◆</span>
-      <span class="client-name">FFT</span>
+      <img class="client-logo" src="img/clients/bmw-2-logo-png-transparent.png" alt="BMW">
       <span class="client-dot">◆</span>
-      <span class="client-name">Solvation</span>
+      <img class="client-logo" src="img/clients/FFT_Firmenlogo_250.svg.png" alt="FFT">
       <span class="client-dot">◆</span>
-      <span class="client-name">INPRO</span>
+      <img class="client-logo" src="img/clients/FEE-Gruppe_Logo.svg.png" alt="F.EE">
       <span class="client-dot">◆</span>
-      <span class="client-name">F.EE</span>
+      <img class="client-logo" src="img/clients/InPro electric.png" alt="INPRO">
       <span class="client-dot">◆</span>
-      <span class="client-name">Lead</span>
+      <img class="client-logo" src="img/clients/Logo.jpg" alt="Solvation">
       <span class="client-dot">◆</span>
-      <span class="client-name">Propoint</span>
+      <img class="client-logo" src="img/clients/logo-LEAD.svg" alt="Lead">
       <span class="client-dot">◆</span>
-      <span class="client-name">ThyssenKrupp</span>
+      <img class="client-logo" src="img/clients/logo_nowe_2019.jpg" alt="Propoint">
       <span class="client-dot">◆</span>
-      <span class="client-name">FFT</span>
+      <img class="client-logo" src="img/clients/mercedes-benz-9-logo-png-transparent.png" alt="Mercedes-Benz">
       <span class="client-dot">◆</span>
-      <span class="client-name">Solvation</span>
+      <img class="client-logo" src="img/clients/P911.DE-94013588.png" alt="Porsche">
       <span class="client-dot">◆</span>
-      <span class="client-name">INPRO</span>
+      <img class="client-logo" src="img/clients/38364_1190_38364_7573_Scout%2BLogo%2BCLEAN%2BBLACK.png" alt="Scout">
       <span class="client-dot">◆</span>
-      <span class="client-name">F.EE</span>
+      <img class="client-logo" src="img/clients/Tesla_logo.png" alt="Tesla">
       <span class="client-dot">◆</span>
-      <span class="client-name">Lead</span>
+      <img class="client-logo" src="img/clients/thyssenkrupp_logo.png" alt="ThyssenKrupp">
       <span class="client-dot">◆</span>
-      <span class="client-name">Propoint</span>
+      <img class="client-logo" src="img/clients/Volkswagen_logo_2019.svg.png" alt="Volkswagen">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/139-1392578_audi-logo.png" alt="Audi">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/bmw-2-logo-png-transparent.png" alt="BMW">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/FFT_Firmenlogo_250.svg.png" alt="FFT">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/FEE-Gruppe_Logo.svg.png" alt="F.EE">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/InPro electric.png" alt="INPRO">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/Logo.jpg" alt="Solvation">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/logo-LEAD.svg" alt="Lead">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/logo_nowe_2019.jpg" alt="Propoint">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/mercedes-benz-9-logo-png-transparent.png" alt="Mercedes-Benz">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/P911.DE-94013588.png" alt="Porsche">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/38364_1190_38364_7573_Scout%2BLogo%2BCLEAN%2BBLACK.png" alt="Scout">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/Tesla_logo.png" alt="Tesla">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/thyssenkrupp_logo.png" alt="ThyssenKrupp">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/Volkswagen_logo_2019.svg.png" alt="Volkswagen">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/139-1392578_audi-logo.png" alt="Audi">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/bmw-2-logo-png-transparent.png" alt="BMW">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/FFT_Firmenlogo_250.svg.png" alt="FFT">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/FEE-Gruppe_Logo.svg.png" alt="F.EE">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/InPro electric.png" alt="INPRO">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/Logo.jpg" alt="Solvation">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/logo-LEAD.svg" alt="Lead">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/logo_nowe_2019.jpg" alt="Propoint">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/mercedes-benz-9-logo-png-transparent.png" alt="Mercedes-Benz">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/P911.DE-94013588.png" alt="Porsche">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/38364_1190_38364_7573_Scout%2BLogo%2BCLEAN%2BBLACK.png" alt="Scout">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/Tesla_logo.png" alt="Tesla">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/thyssenkrupp_logo.png" alt="ThyssenKrupp">
+      <span class="client-dot">◆</span>
+      <img class="client-logo" src="img/clients/Volkswagen_logo_2019.svg.png" alt="Volkswagen">
       <span class="client-dot">◆</span>
     </div>
   </div>
@@ -680,12 +767,9 @@
     <div class="footer-top">
       <div class="footer-brand-col">
         <a href="#home" class="footer-brand">
-          <div class="logo-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <span class="brand-text">INTERY</span>
+          <img src="img/logo-transparent.png" alt="INTERY" class="footer-logo-img">
         </a>
-        <p data-i18n="footer.desc">Trusted electrical and mechanical installation experts for industrial automation across Europe. Rimska ulica 4, Slovenska Bistrica, Slovenia.</p>
+        <p data-i18n="footer.desc">Trusted electrical and mechanical installation experts for industrial automation across Europe, North America, and Canada.</p>
         <div class="footer-social-icons">
           <a href="https://www.facebook.com/profile.php?id=61560681279685" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -701,14 +785,14 @@
       <div class="footer-links-col">
         <h4 data-i18n="footer.services_h">Services</h4>
         <ul>
-          <li><a href="#services" data-i18n="footer.fs1">Robotic Line Installation</a></li>
-          <li><a href="#services" data-i18n="footer.fs2">Conveyor Systems</a></li>
-          <li><a href="#services" data-i18n="footer.fs3">Control Cabinet Wiring</a></li>
-          <li><a href="#services" data-i18n="footer.fs4">Battery Assembly Lines</a></li>
-          <li><a href="#services" data-i18n="footer.fs5">Power Plant Installation</a></li>
-          <li><a href="#services" data-i18n="footer.fs6">Photovoltaic Installation</a></li>
-          <li><a href="#services" data-i18n="footer.fs7">Fire Protection Systems</a></li>
-          <li><a href="#services" data-i18n="footer.fs8">Welding Workforce</a></li>
+          <li><a href="services/robotic-line-installation.html" data-i18n="footer.fs1">Robotic Line Installation</a></li>
+          <li><a href="services/conveyor-lines-warehouses.html" data-i18n="footer.fs2">Conveyor Systems</a></li>
+          <li><a href="services/control-cabinet-wiring.html" data-i18n="footer.fs3">Control Cabinet Wiring</a></li>
+          <li><a href="services/battery-assembly-lines.html" data-i18n="footer.fs4">Battery Assembly Lines</a></li>
+          <li><a href="services/power-plant-installation.html" data-i18n="footer.fs5">Power Plant Installation</a></li>
+          <li><a href="services/photovoltaic-installation.html" data-i18n="footer.fs6">Photovoltaic Installation</a></li>
+          <li><a href="services/fire-protection-systems.html" data-i18n="footer.fs7">Fire Protection Systems</a></li>
+          <li><a href="services/welding-workforce.html" data-i18n="footer.fs8">Welding Workforce</a></li>
         </ul>
       </div>
       <div class="footer-links-col">
@@ -730,8 +814,13 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p data-i18n="footer.copyright">© 2025 INTERY d.o.o. All rights reserved. Registered in Slovenia.</p>
-      <p><span data-i18n="footer.hours">Mon–Fri 07:00–15:00 ·</span> <a href="mailto:info@intery-si.com">info@intery-si.com</a></p>
+      <p data-i18n="footer.copyright">© 2022 INTERY d.o.o. All rights reserved. Registered in Slovenia.</p>
+      <p>
+        <span data-i18n="footer.hours">Mon–Fri 07:00–15:00 ·</span>
+        <a href="mailto:info@intery-si.com">info@intery-si.com</a>
+        <span class="footer-bottom-sep">·</span>
+        <a href="#" data-cookie-settings-link>Cookie Settings</a>
+      </p>
     </div>
   </div>
 </footer>
@@ -739,5 +828,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/cookies.js"></script>
+<script src="js/service-logo-switcher.js"></script>
 </body>
 </html>

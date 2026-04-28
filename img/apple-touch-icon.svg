@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- iOS home screen background with rounded corners -->
+  <defs>
+    <style>
+      @supports (background: url('')) {
+        circle { filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15)); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="180" height="180" fill="#f8fafc" rx="40"/>
+
+  <!-- Logo circle -->
+  <circle cx="90" cy="70" r="50" fill="#0369A1"/>
+
+  <!-- Lightning bolt -->
+  <g transform="translate(90, 70)">
+    <path d="M 0 -18 L 8 -5 L 0 -2 L 10 20 L -6 6 L -2 10 Z" fill="#ffffff" stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="90" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0369A1" text-anchor="middle" letter-spacing="0.5">INTERY</text>
+</svg>

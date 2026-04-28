@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — Join INTERY | Industrial Electricians & Welders</title>
+  <meta name="description" content="Join INTERY d.o.o. — We're hiring industrial electricians and welders for international projects across Europe and North America. Apply today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cookies.css">
+  <meta name="theme-color" content="#0369A1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    /* Careers page specific styles */
+    .careers-hero {
+      position: relative;
+      padding: 9rem 0 6rem;
+      background: linear-gradient(135deg, #0a1929 0%, #0369A1 100%);
+      overflow: hidden;
+      color: #fff;
+    }
+    .careers-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .careers-hero-content { position: relative; z-index: 1; max-width: 900px; }
+    .careers-eyebrow {
+      display: inline-flex; align-items: center; gap: .6rem;
+      padding: .4rem 1rem; background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px; font-size: .8rem; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    .careers-eyebrow-dot { width: 8px; height: 8px; background: #38bdf8; border-radius: 50%; box-shadow: 0 0 12px #38bdf8; }
+    .careers-title {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05;
+      letter-spacing: -.02em; margin: 0 0 1.5rem;
+    }
+    .careers-title em { font-style: italic; color: #38bdf8; font-weight: 700; }
+    .careers-subtitle { font-size: 1.2rem; line-height: 1.6; max-width: 700px; opacity: .9; }
+
+    .jobs-section { padding: 6rem 0; background: #f8fafc; }
+    .jobs-heading { text-align: center; margin-bottom: 4rem; }
+    .jobs-heading h2 {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3.5rem); margin: 0 0 1rem; color: #0a1929;
+    }
+    .jobs-heading p { font-size: 1.1rem; color: #475569; max-width: 700px; margin: 0 auto; }
+
+    .jobs-grid {
+      display: grid; gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      max-width: 1200px; margin: 0 auto;
+    }
+    .job-card {
+      background: #fff; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15,23,42,.06);
+      border: 1px solid rgba(15,23,42,.08);
+      transition: transform .3s ease, box-shadow .3s ease;
+      display: flex; flex-direction: column;
+    }
+    .job-card:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(15,23,42,.12); }
+    .job-card-header {
+      padding: 1.75rem 2rem; background: linear-gradient(135deg, #0a1929 0%, #0369A1 100%);
+      color: #fff; position: relative;
+    }
+    .job-badge {
+      display: inline-block; padding: .3rem .8rem; background: #38bdf8;
+      color: #0a1929; border-radius: 999px; font-size: .75rem;
+      font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .75rem;
+    }
+    .job-badge.urgent { background: #f59e0b; color: #0a1929; }
+    .job-card-header h3 {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+      font-size: 1.75rem; margin: 0 0 .5rem; line-height: 1.2;
+    }
+    .job-location {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .95rem; opacity: .9;
+    }
+    .job-card-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+    .job-meta {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      padding-bottom: 1.5rem; margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .job-meta-item {
+      display: flex; align-items: center; gap: .4rem;
+      font-size: .85rem; color: #475569; font-weight: 500;
+    }
+    .job-meta-item svg { width: 16px; height: 16px; color: #0369A1; }
+    .job-card-body p { color: #334155; line-height: 1.6; margin: 0 0 1.25rem; }
+    .job-card-body h4 {
+      font-size: .9rem; font-weight: 700; color: #0a1929;
+      letter-spacing: .04em; text-transform: uppercase;
+      margin: 0 0 .75rem;
+    }
+    .job-requirements { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+    .job-requirements li {
+      position: relative; padding: .4rem 0 .4rem 1.75rem;
+      color: #334155; line-height: 1.5; font-size: .95rem;
+    }
+    .job-requirements li::before {
+      content: ''; position: absolute; left: 0; top: .8rem;
+      width: 16px; height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230369A1' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+    }
+    .job-apply-btn {
+      margin-top: auto; padding: .85rem 1.5rem;
+      background: #0369A1; color: #fff; border: none; border-radius: 8px;
+      font-weight: 600; font-size: .95rem; cursor: pointer;
+      transition: background .2s ease; text-align: center;
+      text-decoration: none; display: inline-flex; align-items: center;
+      justify-content: center; gap: .5rem;
+    }
+    .job-apply-btn:hover { background: #0284c7; }
+
+    /* Application form */
+    .apply-section {
+      padding: 6rem 0; background: #0a1929; color: #fff;
+      position: relative; overflow: hidden;
+    }
+    .apply-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .apply-grid {
+      display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem;
+      max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+    }
+    @media (max-width: 900px) { .apply-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+    .apply-info h2 {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; margin: 0 0 1.5rem;
+    }
+    .apply-info h2 em { color: #38bdf8; font-style: italic; }
+    .apply-info p { font-size: 1.05rem; line-height: 1.7; opacity: .85; margin-bottom: 1.5rem; }
+    .apply-features { list-style: none; padding: 0; margin: 2rem 0 0; }
+    .apply-features li {
+      display: flex; align-items: flex-start; gap: .9rem;
+      margin-bottom: 1rem; font-size: .95rem; line-height: 1.5;
+    }
+    .apply-features svg {
+      width: 24px; height: 24px; flex-shrink: 0; color: #38bdf8;
+      background: rgba(56,189,248,.1); padding: 4px; border-radius: 50%;
+    }
+
+    .apply-form-wrapper {
+      background: rgba(255,255,255,.04); padding: 2.5rem;
+      border-radius: 16px; border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(10px);
+    }
+    .apply-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .apply-form-row { grid-template-columns: 1fr; } }
+    .apply-form-group { margin-bottom: 1.25rem; }
+    .apply-form-group label {
+      display: block; margin-bottom: .5rem; font-size: .85rem;
+      font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+      color: #cbd5e1;
+    }
+    .apply-form-group input,
+    .apply-form-group select,
+    .apply-form-group textarea {
+      width: 100%; padding: .85rem 1rem;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 8px; color: #fff; font-size: 1rem; font-family: inherit;
+      transition: border-color .2s, background .2s;
+    }
+    .apply-form-group input:focus,
+    .apply-form-group select:focus,
+    .apply-form-group textarea:focus {
+      outline: none; border-color: #38bdf8; background: rgba(255,255,255,.08);
+    }
+    .apply-form-group input::placeholder,
+    .apply-form-group textarea::placeholder { color: rgba(255,255,255,.4); }
+    .apply-form-group textarea { min-height: 120px; resize: vertical; }
+    .apply-form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none' stroke='%2394a3b8' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l4 3 4-3'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 10px 6px;
+      padding-right: 2.5rem;
+    }
+    .apply-form-group select::-ms-expand { display: none; }
+    .apply-form-group select:focus,
+    .apply-form-group select:active,
+    .apply-form-group select:hover {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none' stroke='%2394a3b8' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l4 3 4-3'/%3E%3C/svg%3E");
+    }
+    .apply-form-group select option {
+      background: #0a1929;
+      color: #fff;
+      padding: .5rem;
+    }
+
+    .file-upload-wrapper { position: relative; }
+    .file-upload-label {
+      display: flex; align-items: center; gap: .75rem;
+      padding: 1rem; background: rgba(255,255,255,.04);
+      border: 2px dashed rgba(255,255,255,.15);
+      border-radius: 8px; cursor: pointer; transition: all .2s;
+    }
+    .file-upload-label:hover { background: rgba(255,255,255,.08); border-color: #38bdf8; }
+    .file-upload-label svg { width: 24px; height: 24px; color: #38bdf8; flex-shrink: 0; }
+    .file-upload-label-text { flex: 1; }
+    .file-upload-label-text strong { display: block; font-size: .95rem; color: #fff; }
+    .file-upload-label-text span { font-size: .8rem; color: rgba(255,255,255,.5); }
+    .file-upload-wrapper input[type="file"] {
+      position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0;
+    }
+    .file-name-display {
+      display: none; padding: .65rem 1rem; margin-top: .5rem;
+      background: rgba(56,189,248,.1); border-radius: 6px;
+      font-size: .85rem; color: #38bdf8;
+    }
+    .file-name-display.has-file { display: block; }
+
+    .apply-submit-btn {
+      width: 100%; padding: 1.1rem 2rem;
+      background: linear-gradient(135deg, #0369A1, #38bdf8);
+      color: #fff; border: none; border-radius: 8px;
+      font-size: 1rem; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      margin-top: 1rem;
+    }
+    .apply-submit-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(56,189,248,.3); }
+    .apply-submit-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+    .form-status { display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; font-size: .9rem; }
+    .form-status.success { display: block; background: rgba(16,185,129,.15); border: 1px solid rgba(16,185,129,.3); color: #10b981; }
+    .form-status.error { display: block; background: rgba(239,68,68,.15); border: 1px solid rgba(239,68,68,.3); color: #ef4444; }
+
+    .privacy-note { font-size: .8rem; color: rgba(255,255,255,.5); text-align: center; margin-top: 1rem; line-height: 1.5; }
+    .privacy-note a { color: #38bdf8; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar-container" id="navbar">
+  <div class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="img/logo-transparent.png" alt="INTERY" class="navbar-logo-img">
+      <span class="brand-text">INTERY</span>
+    </a>
+    <ul class="navbar-nav" id="navbarNav">
+      <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li class="nav-item"><a href="index.html#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+      <li class="nav-item"><a href="index.html#about" class="nav-link" data-i18n="nav.about">About</a></li>
+      <li class="nav-item"><a href="index.html#references" class="nav-link" data-i18n="nav.references">References</a></li>
+      <li class="nav-item"><a href="careers.html" class="nav-link active" data-i18n="nav.careers">Careers</a></li>
+      <li class="nav-item"><a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      <li class="nav-item">
+        <a href="tel:+38640122349" class="nav-phone">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.75-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="nav-phone-num">+386 40 122 349</span></a>
+      </li>
+      <li class="nav-item"><a href="#apply" class="cta-button" data-i18n="nav.apply_now">Apply Now</a></li>
+    </ul>
+    <div class="lang-switcher" id="langSwitcher">
+      <button class="lang-dropdown-btn" id="langDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-dropdown-label" id="langDropdownLabel">English EN</span>
+        <svg class="lang-arrow" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="lang-dropdown-menu" id="langDropdownMenu" role="listbox">
+        <button class="lang-option active" data-lang="en" role="option">English <span>EN</span></button>
+        <button class="lang-option" data-lang="sl" role="option">Slovenščina <span>SL</span></button>
+        <button class="lang-option" data-lang="de" role="option">Deutsch <span>DE</span></button>
+        <button class="lang-option" data-lang="pl" role="option">Polski <span>PL</span></button>
+        <button class="lang-option" data-lang="es" role="option">Español <span>ES</span></button>
+        <button class="lang-option" data-lang="sk" role="option">Slovenčina <span>SK</span></button>
+      </div>
+    </div>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a href="index.html" class="mobile-menu-brand">
+      <img src="img/logo-transparent.png" alt="INTERY" class="navbar-logo-img">
+      <span class="brand-text">INTERY</span>
+    </a>
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close">×</button>
+  </div>
+  <ul class="mobile-menu-nav">
+    <li class="mobile-menu-item"><a href="index.html" class="mobile-menu-link" data-i18n="nav.home">Home</a></li>
+    <li class="mobile-menu-item"><a href="index.html#services" class="mobile-menu-link" data-i18n="nav.services">Services</a></li>
+    <li class="mobile-menu-item"><a href="index.html#about" class="mobile-menu-link" data-i18n="nav.about">About</a></li>
+    <li class="mobile-menu-item"><a href="index.html#references" class="mobile-menu-link" data-i18n="nav.references">References</a></li>
+    <li class="mobile-menu-item"><a href="careers.html" class="mobile-menu-link active" data-i18n="nav.careers">Careers</a></li>
+    <li class="mobile-menu-item"><a href="index.html#contact" class="mobile-menu-link" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+  <div class="mobile-lang-switcher" id="mobileLangSwitcher">
+    <button class="lang-dropdown-btn" id="mobileLangDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+      <span class="lang-dropdown-label" id="mobileLangDropdownLabel">English EN</span>
+      <svg class="lang-arrow" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="lang-dropdown-menu" id="mobileLangDropdownMenu" role="listbox">
+      <button class="lang-option active" data-lang="en" role="option">English <span>EN</span></button>
+      <button class="lang-option" data-lang="sl" role="option">Slovenščina <span>SL</span></button>
+      <button class="lang-option" data-lang="de" role="option">Deutsch <span>DE</span></button>
+      <button class="lang-option" data-lang="pl" role="option">Polski <span>PL</span></button>
+      <button class="lang-option" data-lang="es" role="option">Español <span>ES</span></button>
+      <button class="lang-option" data-lang="sk" role="option">Slovenčina <span>SK</span></button>
+    </div>
+  </div>
+  <div class="mobile-cta">
+    <a href="#apply" class="mobile-cta-button" data-i18n="nav.apply_now">Apply Now</a>
+    <a href="tel:+38640122349" class="mobile-phone-link">+386 40 122 349</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="careers-hero">
+  <div class="container">
+    <div class="careers-hero-content">
+      <div class="careers-eyebrow"><span class="careers-eyebrow-dot"></span><span data-i18n="careers.eyebrow">Careers · We're Hiring</span></div>
+      <h1 class="careers-title" data-i18n="careers.title">Build the Future of <em>Industrial Automation</em></h1>
+      <p class="careers-subtitle" data-i18n="careers.subtitle">Join INTERY's team of certified specialists working on high-profile projects across Europe and North America. We're currently hiring experienced industrial electricians for live international assignments.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPEN POSITIONS -->
+<section class="jobs-section">
+  <div class="container">
+    <div class="jobs-heading">
+      <h2 data-i18n="jobs.heading">Open Positions</h2>
+      <p data-i18n="jobs.heading_desc">Active assignments for skilled industrial professionals. All positions offer competitive compensation and full project support.</p>
+    </div>
+
+    <div class="jobs-grid">
+
+      <!-- Job 1: Scout Motors USA -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <span class="job-badge" data-i18n="j1.badge">Independent Contractor</span>
+          <h3 data-i18n="j1.title">Industrial Electricians — Scout Motors</h3>
+          <div class="job-location">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Columbia, SC, USA
+          </div>
+        </div>
+        <div class="job-card-body">
+          <div class="job-meta">
+            <span class="job-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-i18n="j1.duration">Full project duration</span>
+            </span>
+            <span class="job-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <span data-i18n="j1.pay">Competitive pay</span>
+            </span>
+          </div>
+          <p data-i18n="j1.intro">We are currently seeking independent electricians to join our team for a project at Scout Motors in Columbia, SC, USA. We are looking for experienced professionals who can work independently and meet the technical and safety requirements of the project.</p>
+          <h4 data-i18n="j1.req_h">Candidate Requirements Include</h4>
+          <ul class="job-requirements">
+            <li data-i18n="j1.req1">Proven experience as an industrial electrician</li>
+            <li data-i18n="j1.req2">Good knowledge of VASS6 standards</li>
+            <li data-i18n="j1.req3">Valid OSHA 10 training</li>
+            <li data-i18n="j1.req4">Own full set of tools required for installation works</li>
+            <li data-i18n="j1.req5">Minimum B2 level of English</li>
+            <li data-i18n="j1.req6">Ability to work independently and professionally on site</li>
+          </ul>
+          <p style="font-size:.9rem;color:#475569;font-style:italic;" data-i18n="j1.outro">This is an excellent opportunity for skilled electricians with experience in industrial installations and high project standards. If you meet the above requirements and are interested in the position, please send a direct message for more details.</p>
+          <a href="#apply" class="job-apply-btn" data-position="Industrial Electrician — Scout Motors (Columbia, SC, USA)">
+            <span data-i18n="job.apply_btn">Apply for This Position</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Job 2: Shotton Mill UK -->
+      <div class="job-card">
+        <div class="job-card-header">
+          <span class="job-badge urgent" data-i18n="j2.badge">High Hours · Starts April 27</span>
+          <h3 data-i18n="j2.title">Industrial Electricians — Shotton Mill</h3>
+          <div class="job-location">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Shotton Mill, CH5 2LW, UK
+          </div>
+        </div>
+        <div class="job-card-body">
+          <div class="job-meta">
+            <span class="job-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-i18n="j2.hours">60 hrs/week, 6 days</span>
+            </span>
+            <span class="job-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span data-i18n="j2.dates">April – End of May</span>
+            </span>
+            <span class="job-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <span data-i18n="j2.positions">10 positions</span>
+            </span>
+          </div>
+          <p data-i18n="j2.intro">We are assembling a team of 10 qualified electricians for an industrial project at Shotton Mill, CH5 2LW. This assignment will start on 27 April and continue through the end of May, with a workload of 6 days per week and 60 hours weekly.</p>
+          <h4 data-i18n="j2.req_h">We Are Looking for Electricians Who Possess</h4>
+          <ul class="job-requirements">
+            <li data-i18n="j2.req1">strong site-based electrical experience</li>
+            <li data-i18n="j2.req2">previous industrial project exposure</li>
+            <li data-i18n="j2.req3">valid certifications/cards, including ECS/JIB where applicable</li>
+            <li data-i18n="j2.req4">full availability for the duration of the project</li>
+            <li data-i18n="j2.req5">a reliable and professional approach to work</li>
+          </ul>
+          <p style="font-size:.9rem;color:#475569;font-style:italic;" data-i18n="j2.outro">This is a great opportunity for experienced electricians seeking a high-hours assignment on a live industrial site. If you are available or know suitable candidates, please reach out via direct message. Shares within your network would also be appreciated.</p>
+          <a href="#apply" class="job-apply-btn" data-position="Industrial Electrician — Shotton Mill (CH5 2LW, UK)">
+            <span data-i18n="job.apply_btn">Apply for This Position</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION FORM -->
+<section class="apply-section" id="apply">
+  <div class="container">
+    <div class="apply-grid">
+      <div class="apply-info">
+        <h2 data-i18n="apply.title">Submit Your <em>Application</em></h2>
+        <p data-i18n="apply.desc1">Tell us about yourself and your experience. We review every application and respond within 3 business days for active openings.</p>
+        <p data-i18n="apply.desc2">For questions about open positions, contact us directly at <a href="mailto:info@intery-si.com" style="color:#38bdf8;">info@intery-si.com</a> or call <a href="tel:+38640122349" style="color:#38bdf8;">+386 40 122 349</a>.</p>
+        <ul class="apply-features">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="apply.feat1">International project assignments across Europe and North America</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="apply.feat2">Competitive compensation and full project support</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="apply.feat3">Work alongside a team of 70+ certified specialists</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span data-i18n="apply.feat4">High-profile clients including major automotive manufacturers</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="apply-form-wrapper">
+        <form class="apply-form" id="applicationForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+          <!-- Replace this with your Web3Forms access key -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New Job Application — INTERY Careers">
+          <input type="hidden" name="from_name" value="INTERY Careers Application">
+          <input type="hidden" name="redirect" value="false">
+
+          <div class="apply-form-row">
+            <div class="apply-form-group">
+              <label for="firstName" data-i18n="form.first_name">First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" data-i18n-ph="form.first_name_ph" required>
+            </div>
+            <div class="apply-form-group">
+              <label for="lastName" data-i18n="form.last_name">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" data-i18n-ph="form.last_name_ph" required>
+            </div>
+          </div>
+
+          <div class="apply-form-row">
+            <div class="apply-form-group">
+              <label for="email" data-i18n="form.email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" data-i18n-ph="form.email_ph" required>
+            </div>
+            <div class="apply-form-group">
+              <label for="phone" data-i18n="form.phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+386 40 123 456" data-i18n-ph="form.phone_ph" required>
+            </div>
+          </div>
+
+          <div class="apply-form-row">
+            <div class="apply-form-group">
+              <label for="position" data-i18n="form.position">Position *</label>
+              <select id="position" name="position" required>
+                <option value="" data-i18n="form.position_ph">Select a position…</option>
+                <option value="Industrial Electrician — Scout Motors (Columbia, SC, USA)" data-i18n="form.pos_scout">Electrician — Scout Motors (USA)</option>
+                <option value="Industrial Electrician — Shotton Mill (CH5 2LW, UK)" data-i18n="form.pos_shotton">Electrician — Shotton Mill (UK)</option>
+                <option value="Industrial Electrician — General Application" data-i18n="form.pos_general">Electrician — General Application</option>
+                <option value="Other" data-i18n="form.pos_other">Other</option>
+              </select>
+            </div>
+            <div class="apply-form-group">
+              <label for="experience" data-i18n="form.experience">Years of Experience *</label>
+              <select id="experience" name="experience" required>
+                <option value="" data-i18n="form.experience_ph">Select…</option>
+                <option value="0-2 years" data-i18n="form.exp_0_2">0–2 years</option>
+                <option value="3-5 years" data-i18n="form.exp_3_5">3–5 years</option>
+                <option value="5-10 years" data-i18n="form.exp_5_10">5–10 years</option>
+                <option value="10+ years" data-i18n="form.exp_10">10+ years</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="apply-form-group">
+            <label for="country" data-i18n="form.country">Country of Residence *</label>
+            <input type="text" id="country" name="country" placeholder="Slovenia" data-i18n-ph="form.country_ph" required>
+          </div>
+
+          <div class="apply-form-group">
+            <label for="certifications" data-i18n="form.cert">Certifications & Qualifications</label>
+            <input type="text" id="certifications" name="certifications" placeholder="e.g. VDE, OSHA 10, ECS/JIB, VASS6, MIG/TIG welding" data-i18n-ph="form.cert_ph">
+          </div>
+
+          <div class="apply-form-group">
+            <label for="languages" data-i18n="form.lang">Languages Spoken</label>
+            <input type="text" id="languages" name="languages" placeholder="e.g. English (B2), Slovenian (native), German (B1)" data-i18n-ph="form.lang_ph">
+          </div>
+
+          <div class="apply-form-group">
+            <label for="message" data-i18n="form.cover">Cover Message</label>
+            <textarea id="message" name="message" placeholder="Briefly tell us about your background, availability, and why you're a good fit for this position…" data-i18n-ph="form.cover_ph"></textarea>
+          </div>
+
+          <div class="apply-form-group">
+            <label><span data-i18n="form.cv">Upload CV / Resume</span> <span style="font-weight:400;text-transform:none;color:rgba(255,255,255,.5);" data-i18n="form.cv_optional">(optional)</span></label>
+            <div class="file-upload-wrapper">
+              <label for="cv" class="file-upload-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                <div class="file-upload-label-text">
+                  <strong data-i18n="form.cv_click">Click to upload your CV</strong>
+                  <span data-i18n="form.cv_format">PDF, DOC, or DOCX (max 5MB)</span>
+                </div>
+              </label>
+              <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+              <div class="file-name-display" id="fileNameDisplay"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="apply-submit-btn" id="submitBtn">
+            <span data-i18n="form.submit">Submit Application</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9 22,2"/></svg>
+          </button>
+
+          <div class="form-status" id="formStatus"></div>
+
+          <p class="privacy-note" data-i18n="form.privacy">By submitting this form, you consent to INTERY d.o.o. processing your information for recruitment purposes. Your data is sent securely to <a href="mailto:info@intery-si.com">info@intery-si.com</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-brand">
+          <img src="img/logo-transparent.png" alt="INTERY" class="footer-logo-img">
+          <span class="brand-text">INTERY</span>
+        </a>
+        <p data-i18n="footer.desc">Trusted electrical and mechanical installation experts for industrial automation across Europe, North America, and Canada.</p>
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61560681279685" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/intery-d-o-o" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/interyautomation" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4 data-i18n="footer.services_h">Services</h4>
+        <ul>
+          <li><a href="services/robotic-line-installation.html" data-i18n="footer.fs1">Robotic Line Installation</a></li>
+          <li><a href="services/conveyor-lines-warehouses.html" data-i18n="footer.fs2">Conveyor Systems</a></li>
+          <li><a href="services/control-cabinet-wiring.html" data-i18n="footer.fs3">Control Cabinet Wiring</a></li>
+          <li><a href="services/battery-assembly-lines.html" data-i18n="footer.fs4">Battery Assembly Lines</a></li>
+          <li><a href="services/power-plant-installation.html" data-i18n="footer.fs5">Power Plant Installation</a></li>
+          <li><a href="services/photovoltaic-installation.html" data-i18n="footer.fs6">Photovoltaic Installation</a></li>
+          <li><a href="services/fire-protection-systems.html" data-i18n="footer.fs7">Fire Protection Systems</a></li>
+          <li><a href="services/welding-workforce.html" data-i18n="footer.fs8">Welding Workforce</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4 data-i18n="footer.company_h">Company</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+          <li><a href="index.html#about" data-i18n="footer.about">About Us</a></li>
+          <li><a href="index.html#references" data-i18n="footer.references">References</a></li>
+          <li><a href="careers.html" data-i18n="footer.careers">Careers</a></li>
+          <li><a href="index.html#contact" data-i18n="footer.contact">Contact</a></li>
+        </ul>
+        <h4 style="margin-top:2rem;" data-i18n="footer.contact_h">Contact</h4>
+        <ul>
+          <li><a href="tel:+38640122349">+386 40 122 349</a></li>
+          <li><a href="mailto:info@intery-si.com">info@intery-si.com</a></li>
+          <li>Rimska ulica 4</li>
+          <li>Slovenska Bistrica 2310</li>
+          <li>Slovenia, EU</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer.copyright">© 2022 INTERY d.o.o. All rights reserved. Registered in Slovenia.</p>
+      <p>
+        <span data-i18n="footer.hours">Mon–Fri 07:00–15:00 ·</span>
+        <a href="mailto:info@intery-si.com">info@intery-si.com</a>
+        <span class="footer-bottom-sep">·</span>
+        <a href="#" data-cookie-settings-link data-i18n="footer.cookie_settings">Cookie Settings</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+function openMenu() { mobileMenu.classList.add('open'); mobileMenuOverlay.classList.add('open'); }
+function closeMenu() { mobileMenu.classList.remove('open'); mobileMenuOverlay.classList.remove('open'); }
+
+mobileToggle?.addEventListener('click', openMenu);
+mobileMenuClose?.addEventListener('click', closeMenu);
+mobileMenuOverlay?.addEventListener('click', closeMenu);
+document.querySelectorAll('.mobile-menu-link, .mobile-cta-button, .mobile-phone-link').forEach(link => link.addEventListener('click', closeMenu));
+
+// Pre-fill position from "Apply" button click
+document.querySelectorAll('.job-apply-btn[data-position]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const position = btn.getAttribute('data-position');
+    const select = document.getElementById('position');
+    if (position && select) {
+      const opt = Array.from(select.options).find(o => o.value === position);
+      if (opt) select.value = position;
+    }
+  });
+});
+
+// File upload display
+const cvInput = document.getElementById('cv');
+const fileNameDisplay = document.getElementById('fileNameDisplay');
+cvInput?.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    if (file.size > 5 * 1024 * 1024) {
+      alert(tr('form.file_too_large'));
+      e.target.value = '';
+      fileNameDisplay.classList.remove('has-file');
+      fileNameDisplay.textContent = '';
+      return;
+    }
+    fileNameDisplay.textContent = `📎 ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+    fileNameDisplay.classList.add('has-file');
+  } else {
+    fileNameDisplay.classList.remove('has-file');
+    fileNameDisplay.textContent = '';
+  }
+});
+
+// Form submission with Web3Forms
+const form = document.getElementById('applicationForm');
+const submitBtn = document.getElementById('submitBtn');
+const formStatus = document.getElementById('formStatus');
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  submitBtn.disabled = true;
+  submitBtn.querySelector('span').textContent = tr('form.submit_sending');
+  formStatus.className = 'form-status';
+  formStatus.textContent = '';
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+    const result = await response.json();
+    if (result.success) {
+      formStatus.className = 'form-status success';
+      formStatus.textContent = tr('form.submit_success');
+      form.reset();
+      fileNameDisplay.classList.remove('has-file');
+    } else {
+      formStatus.className = 'form-status error';
+      formStatus.textContent = '⚠ ' + (result.message || tr('form.submit_default_error'));
+    }
+  } catch (err) {
+    formStatus.className = 'form-status error';
+    formStatus.textContent = tr('form.network_error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.querySelector('span').textContent = tr('form.submit');
+  }
+});
+</script>
+
+<script src="js/careers-i18n.js"></script>
+<script src="js/cookies.js"></script>
+
+</body>
+</html>
