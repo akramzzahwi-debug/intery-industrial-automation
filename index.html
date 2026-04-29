@@ -154,14 +154,14 @@
   <div class="container hero-content">
     <div class="hero-eyebrow" id="heroEyebrow">
       <span class="eyebrow-dot"></span>
-      <span data-i18n="hero.eyebrow">Slovenia · Europe · Industrial Excellence</span>
+      <span data-i18n="hero.eyebrow">Europe & North America · Industrial Excellence</span>
     </div>
     <h1 class="hero-title" id="heroTitle">
       <span class="title-line" id="titleLine1" data-i18n="hero.title1">YOUR AUTOMATION</span>
       <span class="title-line accent-line" id="titleLine2" data-i18n="hero.title2">DONE <em>RIGHT.</em></span>
     </h1>
     <p class="hero-subtitle" id="heroSubtitle" data-i18n="hero.subtitle">
-      Electrical and mechanical installation for robotic lines, conveyor systems, and battery assembly — serving automotive, energy, and industrial sectors across Europe.
+      Electrical and mechanical installation for robotic lines, conveyor systems, and battery assembly — serving automotive, energy, and industrial sectors across Europe and North America.
     </p>
     <div class="hero-ctas" id="heroCtas">
       <a href="#services" class="btn btn-primary">
@@ -197,7 +197,7 @@
       <h2 class="section-title" data-i18n="services.title">Find the Right Solution<br>for Your Operation</h2>
       <p class="section-subtitle" data-i18n="services.subtitle">From robotic lines to solar installations — technically advanced, safe, and efficient solutions built for real-world industrial environments.</p>
     </div>
-    <div class="services-grid">
+    <div class="services-grid" id="services-grid">
 
       <a href="services/robotic-line-installation.html" class="service-card">
         <div class="service-card-img">
@@ -241,7 +241,7 @@
         </div>
       </a>
 
-      <a href="services/battery-assembly-lines.html" class="service-card">
+      <a href="services/battery-assembly-lines.html" class="service-card service-card-extra">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/073be567-be1d-11f0-9bda-0242ac110002-jpg-regular_image.jpeg" alt="Battery assembly line installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -255,7 +255,7 @@
         </div>
       </a>
 
-      <a href="services/power-plant-installation.html" class="service-card">
+      <a href="services/power-plant-installation.html" class="service-card service-card-extra">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/54e5bd5c-be1d-11f0-b8cd-0242ac110002-jpg-regular_image.jpeg" alt="Power plant electrical installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -269,7 +269,7 @@
         </div>
       </a>
 
-      <a href="services/photovoltaic-installation.html" class="service-card">
+      <a href="services/photovoltaic-installation.html" class="service-card service-card-extra">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/862a9e5b-be1a-11f0-814c-0242ac110002-jpg-regular_image.jpeg" alt="Photovoltaic solar installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -283,7 +283,7 @@
         </div>
       </a>
 
-      <a href="services/fire-protection-systems.html" class="service-card">
+      <a href="services/fire-protection-systems.html" class="service-card service-card-extra">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/5094c0d0-be26-11f0-a7a0-0242ac110002-jpg-regular_image.jpeg" alt="Fire protection system installation" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -297,7 +297,7 @@
         </div>
       </a>
 
-      <a href="services/process-solutions.html" class="service-card">
+      <a href="services/process-solutions.html" class="service-card service-card-extra">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/40bc4273-be27-11f0-adcb-0242ac110002-jpg-regular_image.jpeg" alt="Process solutions services" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -311,7 +311,7 @@
         </div>
       </a>
 
-      <a href="services/welding-workforce.html" class="service-card">
+      <a href="services/welding-workforce.html" class="service-card service-card-extra">
         <div class="service-card-img">
           <img src="https://cdn.b12.io/client_media/LIUHnpxC/6227286c-c6d3-11f0-adda-0242ac110002-jpg-regular_image.jpeg" alt="Welding workforce supply" loading="lazy">
           <div class="service-card-overlay"></div>
@@ -326,6 +326,10 @@
       </a>
 
     </div>
+    <button type="button" id="services-toggle" class="services-toggle" aria-expanded="false" aria-controls="services-grid">
+      <span class="services-toggle-label" data-i18n="services.show_more">Show more services</span>
+      <span class="services-toggle-icon" aria-hidden="true">+</span>
+    </button>
   </div>
 </section>
 
@@ -711,7 +715,10 @@
       </div>
 
       <div class="contact-form-wrapper">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="/api/contact" method="POST" novalidate>
+          <input type="hidden" name="_type" value="contact">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
+          <div class="form-status" id="contactFormStatus" role="status" aria-live="polite"></div>
           <div class="form-row">
             <div class="form-group">
               <label for="firstName" data-i18n="form.first_name">First Name *</label>
@@ -769,6 +776,7 @@
         <a href="#home" class="footer-brand">
           <img src="img/logo-transparent.png" alt="INTERY" class="footer-logo-img">
         </a>
+        <p class="footer-slogan" data-i18n="footer.slogan">Engineered for excellence.</p>
         <p data-i18n="footer.desc">Trusted electrical and mechanical installation experts for industrial automation across Europe, North America, and Canada.</p>
         <div class="footer-social-icons">
           <a href="https://www.facebook.com/profile.php?id=61560681279685" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-icon">

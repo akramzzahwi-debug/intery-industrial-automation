@@ -8,10 +8,10 @@ const translations = {
     'nav.home':'Home','nav.services':'Services','nav.about':'About',
     'nav.references':'References','nav.careers':'Careers','nav.contact':'Contact',
     'nav.quote':'Get a Quote','nav.mobile_quote':'Get a Quote',
-    'hero.eyebrow':'Slovenia · Europe · Industrial Excellence',
+    'hero.eyebrow':'Europe & North America · Industrial Excellence',
     'hero.title1':'YOUR AUTOMATION',
     'hero.title2':'DONE <em>RIGHT.</em>',
-    'hero.subtitle':'Electrical and mechanical installation for robotic lines, conveyor systems, and battery assembly — serving automotive, energy, and industrial sectors across Europe.',
+    'hero.subtitle':'Electrical and mechanical installation for robotic lines, conveyor systems, and battery assembly — serving automotive, energy, and industrial sectors across Europe and North America.',
     'hero.btn_services':'View Services','hero.btn_quote':'Request a Quote',
     'stats.specialists':'Certified Specialists','stats.projects':'Completed Projects',
     'stats.clients':'Clients Worldwide','stats.categories':'Service Categories',
@@ -29,6 +29,7 @@ const translations = {
     's09.title':'Welding Workforce','s09.desc':'Reliable, certified welders supplied for industrial and manufacturing projects across Europe.',
     'service.inquire':'Inquire',
     'service.learn':'Learn More',
+    'services.show_more':'Show more services','services.show_less':'Show less',
     'about.tag':'Your Expert Partner',
     'about.title':'Leading Electrical<br><em>Installations</em>',
     'about.desc':'INTERY d.o.o. is a trusted provider of high-quality electrical and mechanical installation services for the automotive, energy, and industrial sectors. With a strong team of over 70 certified specialists, we deliver technically advanced, safe, and efficient solutions that support modern production environments and large-scale industrial operations.',
@@ -68,7 +69,7 @@ const translations = {
     'opt.3':'Control Cabinet Wiring','opt.4':'Battery Assembly Lines','opt.5':'Power Plant Installation',
     'opt.6':'Photovoltaic Installation','opt.7':'Fire Protection Systems','opt.8':'Process Solutions',
     'opt.9':'Welding Workforce','opt.10':'Other',
-    'footer.desc':'Trusted electrical and mechanical installation experts for industrial automation across Europe, North America, and Canada.',
+    'footer.slogan':'Engineered for excellence.','footer.desc':'Trusted electrical and mechanical installation experts for industrial automation across Europe, North America, and Canada.',
     'footer.services_h':'Services','footer.company_h':'Company','footer.contact_h':'Contact',
     'footer.fs1':'Robotic Line Installation','footer.fs2':'Conveyor Systems','footer.fs3':'Control Cabinet Wiring',
     'footer.fs4':'Battery Assembly Lines','footer.fs5':'Power Plant Installation',
@@ -81,10 +82,10 @@ const translations = {
     'nav.home':'Domov','nav.services':'Storitve','nav.about':'O nas',
     'nav.references':'Reference','nav.careers':'Kariera','nav.contact':'Kontakt',
     'nav.quote':'Zahtevajte ponudbo','nav.mobile_quote':'Zahtevajte ponudbo',
-    'hero.eyebrow':'Slovenija · Evropa · Industrijska odličnost',
+    'hero.eyebrow':'Evropa & Severna Amerika · Industrijska odličnost',
     'hero.title1':'VAŠA AVTOMATIZACIJA',
     'hero.title2':'OPRAVLJENA <em>PRAV.</em>',
-    'hero.subtitle':'Električne in mehanske inštalacije za robotske linije, transportne sisteme in sestavo baterij – za avtomobilski, energetski in industrijski sektor po vsej Evropi.',
+    'hero.subtitle':'Električne in mehanske inštalacije za robotske linije, transportne sisteme in sestavo baterij – za avtomobilski, energetski in industrijski sektor po vsej Evropi in Severni Ameriki.',
     'hero.btn_services':'Oglejte si storitve','hero.btn_quote':'Zahtevajte ponudbo',
     'stats.specialists':'Certificiranih strokovnjakov','stats.projects':'Dokončanih projektov',
     'stats.clients':'Strank po svetu','stats.categories':'Kategorij storitev',
@@ -102,6 +103,7 @@ const translations = {
     's09.title':'Varilci','s09.desc':'Zanesljivi, certificirani varilci za industrijske in proizvodne projekte po vsej Evropi.',
     'service.inquire':'Povpraševanje',
     'service.learn':'Več informacij',
+    'services.show_more':'Prikaži več storitev','services.show_less':'Prikaži manj',
     'about.tag':'Zakaj mi?',
     'about.title':'Zakaj sodelovati<br>z <em>INTERY?</em>',
     'about.desc':'Združujemo 70+ certificiranih strokovnjakov s pristopom, osredotočenim na stranke – zagotavljamo pravočasno izvedbo, operativno zanesljivost in dolgoročno uspešnost pri vsakem projektu.',
@@ -140,7 +142,7 @@ const translations = {
     'opt.3':'Kabeliranje razdelilnih omar','opt.4':'Linije za sestavo baterij','opt.5':'Inštalacija elektrarn',
     'opt.6':'Fotovoltaična inštalacija','opt.7':'Sistemi požarne zaščite','opt.8':'Procesne rešitve',
     'opt.9':'Varilci','opt.10':'Drugo',
-    'footer.desc':'Zaupanja vredni strokovnjaki za električne in mehanske inštalacije za industrijsko avtomatizacijo po vsej Evropi, Severni Ameriki in Kanadi.',
+    'footer.slogan':'Zasnovano za odličnost.','footer.desc':'Zaupanja vredni strokovnjaki za električne in mehanske inštalacije za industrijsko avtomatizacijo po vsej Evropi, Severni Ameriki in Kanadi.',
     'footer.services_h':'Storitve','footer.company_h':'Podjetje','footer.contact_h':'Kontakt',
     'footer.fs1':'Inštalacija robotskih linij','footer.fs2':'Transportni sistemi','footer.fs3':'Kabeliranje razdelilnih omar',
     'footer.fs4':'Linije za sestavo baterij','footer.fs5':'Inštalacija elektrarn',
@@ -153,10 +155,10 @@ const translations = {
     'nav.home':'Startseite','nav.services':'Leistungen','nav.about':'Über uns',
     'nav.references':'Referenzen','nav.careers':'Karriere','nav.contact':'Kontakt',
     'nav.quote':'Angebot einholen','nav.mobile_quote':'Angebot einholen',
-    'hero.eyebrow':'Slowenien · Europa · Industrielle Exzellenz',
+    'hero.eyebrow':'Europa & Nordamerika · Industrielle Exzellenz',
     'hero.title1':'IHRE AUTOMATION',
     'hero.title2':'RICHTIG <em>GEMACHT.</em>',
-    'hero.subtitle':'Elektrische und mechanische Installation für Roboterlinien, Fördersysteme und Batteriemontage – für die Automobil-, Energie- und Industriebranche in ganz Europa.',
+    'hero.subtitle':'Elektrische und mechanische Installation für Roboterlinien, Fördersysteme und Batteriemontage – für die Automobil-, Energie- und Industriebranche in ganz Europa und Nordamerika.',
     'hero.btn_services':'Leistungen ansehen','hero.btn_quote':'Angebot anfordern',
     'stats.specialists':'Zertifizierte Fachleute','stats.projects':'Abgeschlossene Projekte',
     'stats.clients':'Kunden weltweit','stats.categories':'Leistungskategorien',
@@ -174,6 +176,7 @@ const translations = {
     's09.title':'Schweißer-Personal','s09.desc':'Zuverlässige, zertifizierte Schweißer für Industrie- und Fertigungsprojekte in ganz Europa.',
     'service.inquire':'Anfragen',
     'service.learn':'Mehr erfahren',
+    'services.show_more':'Weitere Leistungen anzeigen','services.show_less':'Weniger anzeigen',
     'about.tag':'Warum wir?',
     'about.title':'Warum Partner<br>von <em>INTERY?</em>',
     'about.desc':'Wir kombinieren 70+ zertifizierte Fachleute mit einem kundenorientierten Ansatz – für pünktliche Lieferung, Betriebszuverlässigkeit und langfristige Leistung bei jedem Projekt.',
@@ -212,7 +215,7 @@ const translations = {
     'opt.3':'Schaltschrankverkabelung','opt.4':'Batteriemontageanlagen','opt.5':'Kraftwerksinstallation',
     'opt.6':'Photovoltaik-Installation','opt.7':'Brandschutzanlagen','opt.8':'Prozesslösungen',
     'opt.9':'Schweißer-Personal','opt.10':'Sonstiges',
-    'footer.desc':'Vertrauenswürdige Experten für elektrische und mechanische Installationen für Industrieautomatisierung in ganz Europa, Nordamerika und Kanada.',
+    'footer.slogan':'Entwickelt für Exzellenz.','footer.desc':'Vertrauenswürdige Experten für elektrische und mechanische Installationen für Industrieautomatisierung in ganz Europa, Nordamerika und Kanada.',
     'footer.services_h':'Leistungen','footer.company_h':'Unternehmen','footer.contact_h':'Kontakt',
     'footer.fs1':'Roboterlinien-Installation','footer.fs2':'Fördersysteme','footer.fs3':'Schaltschrankverkabelung',
     'footer.fs4':'Batteriemontageanlagen','footer.fs5':'Kraftwerksinstallation',
@@ -225,10 +228,10 @@ const translations = {
     'nav.home':'Strona główna','nav.services':'Usługi','nav.about':'O nas',
     'nav.references':'Referencje','nav.careers':'Kariera','nav.contact':'Kontakt',
     'nav.quote':'Zapytaj o wycenę','nav.mobile_quote':'Zapytaj o wycenę',
-    'hero.eyebrow':'Słowenia · Europa · Doskonałość przemysłowa',
+    'hero.eyebrow':'Europa & Ameryka Północna · Doskonałość przemysłowa',
     'hero.title1':'TWOJA AUTOMATYZACJA',
     'hero.title2':'WYKONANA <em>PERFEKCYJNIE.</em>',
-    'hero.subtitle':'Instalacje elektryczne i mechaniczne dla linii robotycznych, systemów transportowych i montażu baterii – dla sektorów motoryzacyjnego, energetycznego i przemysłowego w całej Europie.',
+    'hero.subtitle':'Instalacje elektryczne i mechaniczne dla linii robotycznych, systemów transportowych i montażu baterii – dla sektorów motoryzacyjnego, energetycznego i przemysłowego w Europie i Ameryce Północnej.',
     'hero.btn_services':'Zobacz usługi','hero.btn_quote':'Zapytaj o wycenę',
     'stats.specialists':'Certyfikowanych specjalistów','stats.projects':'Zrealizowanych projektów',
     'stats.clients':'Klientów na świecie','stats.categories':'Kategorii usług',
@@ -246,6 +249,7 @@ const translations = {
     's09.title':'Pracownicy spawalnicy','s09.desc':'Niezawodni, certyfikowani spawacze dla projektów przemysłowych i produkcyjnych w całej Europie.',
     'service.inquire':'Zapytaj',
     'service.learn':'Dowiedz się więcej',
+    'services.show_more':'Pokaż więcej usług','services.show_less':'Pokaż mniej',
     'about.tag':'Dlaczego my?',
     'about.title':'Wiodące instalacje<br><em>elektryczne</em>',
     'about.desc':'INTERY d.o.o. to zaufany dostawca wysokiej jakości usług instalacji elektrycznych i mechanicznych dla sektorów motoryzacyjnego, energetycznego i przemysłowego. Dysponując zespołem ponad 70 certyfikowanych specjalistów, dostarczamy technicznie zaawansowane, bezpieczne i wydajne rozwiązania wspierające nowoczesne środowiska produkcyjne i wielkoskalowe operacje przemysłowe.',
@@ -285,7 +289,7 @@ const translations = {
     'opt.3':'Okablowanie szaf sterowniczych','opt.4':'Linie montażu baterii','opt.5':'Instalacja elektrowni',
     'opt.6':'Instalacja fotowoltaiczna','opt.7':'Systemy ochrony przeciwpożarowej','opt.8':'Rozwiązania procesowe',
     'opt.9':'Pracownicy spawalnicy','opt.10':'Inne',
-    'footer.desc':'Zaufani eksperci w zakresie elektrycznych i mechanicznych instalacji dla automatyzacji przemysłowej w całej Europie, Ameryce Północnej i Kanadzie.',
+    'footer.slogan':'Zaprojektowane z myślą o doskonałości.','footer.desc':'Zaufani eksperci w zakresie elektrycznych i mechanicznych instalacji dla automatyzacji przemysłowej w całej Europie, Ameryce Północnej i Kanadzie.',
     'footer.services_h':'Usługi','footer.company_h':'Firma','footer.contact_h':'Kontakt',
     'footer.fs1':'Instalacja linii robotycznych','footer.fs2':'Systemy transportowe','footer.fs3':'Okablowanie szaf sterowniczych',
     'footer.fs4':'Linie montażu baterii','footer.fs5':'Instalacja elektrowni',
@@ -298,10 +302,10 @@ const translations = {
     'nav.home':'Inicio','nav.services':'Servicios','nav.about':'Sobre nosotros',
     'nav.references':'Referencias','nav.careers':'Empleo','nav.contact':'Contacto',
     'nav.quote':'Solicitar presupuesto','nav.mobile_quote':'Solicitar presupuesto',
-    'hero.eyebrow':'Eslovenia · Europa · Excelencia industrial',
+    'hero.eyebrow':'Europa y Norteamérica · Excelencia industrial',
     'hero.title1':'TU AUTOMATIZACIÓN',
     'hero.title2':'HECHA <em>BIEN.</em>',
-    'hero.subtitle':'Instalación eléctrica y mecánica para líneas robóticas, sistemas de transporte y ensamblaje de baterías – para los sectores automotriz, energético e industrial en toda Europa.',
+    'hero.subtitle':'Instalación eléctrica y mecánica para líneas robóticas, sistemas de transporte y ensamblaje de baterías – para los sectores automotriz, energético e industrial en Europa y Norteamérica.',
     'hero.btn_services':'Ver servicios','hero.btn_quote':'Solicitar presupuesto',
     'stats.specialists':'Especialistas certificados','stats.projects':'Proyectos completados',
     'stats.clients':'Clientes en todo el mundo','stats.categories':'Categorías de servicio',
@@ -319,6 +323,7 @@ const translations = {
     's09.title':'Personal de soldadura','s09.desc':'Soldadores certificados y fiables para proyectos industriales y de fabricación en toda Europa.',
     'service.inquire':'Consultar',
     'service.learn':'Saber más',
+    'services.show_more':'Ver más servicios','services.show_less':'Ver menos',
     'about.tag':'Tu socio experto',
     'about.title':'Instalaciones eléctricas<br><em>líderes</em>',
     'about.desc':'INTERY d.o.o. es un proveedor de confianza de servicios de instalación eléctrica y mecánica de alta calidad para los sectores automotriz, energético e industrial. Con un sólido equipo de más de 70 especialistas certificados, ofrecemos soluciones técnicamente avanzadas, seguras y eficientes que apoyan los entornos de producción modernos y las operaciones industriales a gran escala.',
@@ -358,7 +363,7 @@ const translations = {
     'opt.3':'Cableado de armarios de control','opt.4':'Líneas de ensamblaje de baterías','opt.5':'Instalación de plantas de energía',
     'opt.6':'Instalación fotovoltaica','opt.7':'Sistemas de protección contra incendios','opt.8':'Soluciones de proceso',
     'opt.9':'Personal de soldadura','opt.10':'Otro',
-    'footer.desc':'Expertos de confianza en instalación eléctrica y mecánica para automatización industrial en toda Europa, América del Norte y Canadá.',
+    'footer.slogan':'Diseñado para la excelencia.','footer.desc':'Expertos de confianza en instalación eléctrica y mecánica para automatización industrial en toda Europa, América del Norte y Canadá.',
     'footer.services_h':'Servicios','footer.company_h':'Empresa','footer.contact_h':'Contacto',
     'footer.fs1':'Instalación de líneas robóticas','footer.fs2':'Sistemas de transporte','footer.fs3':'Cableado de armarios de control',
     'footer.fs4':'Líneas de ensamblaje de baterías','footer.fs5':'Instalación de plantas de energía',
@@ -371,10 +376,10 @@ const translations = {
     'nav.home':'Domov','nav.services':'Služby','nav.about':'O nás',
     'nav.references':'Referencie','nav.careers':'Kariéra','nav.contact':'Kontakt',
     'nav.quote':'Získať cenovú ponuku','nav.mobile_quote':'Získať cenovú ponuku',
-    'hero.eyebrow':'Slovinsko · Európa · Priemyselná excelencia',
+    'hero.eyebrow':'Európa & Severná Amerika · Priemyselná excelencia',
     'hero.title1':'VAŠA AUTOMATIZÁCIA',
     'hero.title2':'VYKONANÁ <em>SPRÁVNE.</em>',
-    'hero.subtitle':'Elektrické a mechanické inštalácie pre robotické linky, dopravníkové systémy a montáž batérií – pre automobilový, energetický a priemyselný sektor v celej Európe.',
+    'hero.subtitle':'Elektrické a mechanické inštalácie pre robotické linky, dopravníkové systémy a montáž batérií – pre automobilový, energetický a priemyselný sektor v Európe a Severnej Amerike.',
     'hero.btn_services':'Zobraziť služby','hero.btn_quote':'Požiadať o cenovú ponuku',
     'stats.specialists':'Certifikovaných špecialistov','stats.projects':'Dokončených projektov',
     'stats.clients':'Klientov po celom svete','stats.categories':'Kategórií služieb',
@@ -392,6 +397,7 @@ const translations = {
     's09.title':'Zvárači','s09.desc':'Spoľahliví, certifikovaní zvárači pre priemyselné a výrobné projekty v celej Európe.',
     'service.inquire':'Dopytovať sa',
     'service.learn':'Dozvedieť sa viac',
+    'services.show_more':'Zobraziť viac služieb','services.show_less':'Zobraziť menej',
     'about.tag':'Váš odborný partner',
     'about.title':'Vedúce elektrické<br><em>inštalácie</em>',
     'about.desc':'INTERY d.o.o. je dôveryhodným poskytovateľom vysokokvalitných elektrických a mechanických inštalačných služieb pre automobilový, energetický a priemyselný sektor. S silným tímom viac ako 70 certifikovaných špecialistov poskytujeme technicky pokročilé, bezpečné a efektívne riešenia, ktoré podporujú moderné výrobné prostredia a veľkokapacitné priemyselné operácie.',
@@ -431,7 +437,7 @@ const translations = {
     'opt.3':'Kabeláž rozvádzačov','opt.4':'Linky na montáž batérií','opt.5':'Inštalácia elektrární',
     'opt.6':'Fotovoltaická inštalácia','opt.7':'Systémy požiarnej ochrany','opt.8':'Procesné riešenia',
     'opt.9':'Zvárači','opt.10':'Iné',
-    'footer.desc':'Dôveryhodní odborníci na elektrické a mechanické inštalácie pre priemyselnú automatizáciu v celej Európe, Severnej Amerike a Kanade.',
+    'footer.slogan':'Navrhnuté pre dokonalosť.','footer.desc':'Dôveryhodní odborníci na elektrické a mechanické inštalácie pre priemyselnú automatizáciu v celej Európe, Severnej Amerike a Kanade.',
     'footer.services_h':'Služby','footer.company_h':'Spoločnosť','footer.contact_h':'Kontakt',
     'footer.fs1':'Inštalácia robotických liniek','footer.fs2':'Dopravníkové systémy','footer.fs3':'Kabeláž rozvádzačov',
     'footer.fs4':'Linky na montáž batérií','footer.fs5':'Inštalácia elektrární',
@@ -587,6 +593,27 @@ mobileLinks.forEach(link => {
 desktopLinks.forEach(link => {
   link.addEventListener('click', () => setActiveLink(link.getAttribute('href')));
 });
+
+/* ── SERVICES MOBILE TOGGLE ──────────────────────── */
+const servicesToggle = document.getElementById('services-toggle');
+const servicesGrid   = document.getElementById('services-grid');
+if (servicesToggle && servicesGrid) {
+  servicesToggle.addEventListener('click', () => {
+    const expanded = servicesGrid.classList.toggle('is-expanded');
+    servicesToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    const labelEl = servicesToggle.querySelector('.services-toggle-label');
+    const key = expanded ? 'services.show_less' : 'services.show_more';
+    labelEl.dataset.i18n = key;
+    const t = translations[currentLang];
+    if (t && t[key]) labelEl.textContent = t[key];
+    if (expanded) {
+      servicesGrid.querySelectorAll('.service-card-extra').forEach(card => {
+        gsap.set(card, { clearProps: 'opacity,transform' });
+      });
+    }
+    if (window.ScrollTrigger) ScrollTrigger.refresh();
+  });
+}
 
 /* ── NAVBAR SCROLL EFFECT ────────────────────────── */
 const navbar = document.getElementById('navbar');
@@ -769,25 +796,42 @@ document.querySelectorAll('.btn-primary, .cta-button').forEach(btn => {
 /* ── CONTACT FORM SUBMIT ─────────────────────────── */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  const status = document.getElementById('contactFormStatus');
+  const t = (k, fb) => (translations[currentLang] && translations[currentLang][k]) || fb;
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const originalHTML = btn.innerHTML;
 
-    btn.innerHTML = `<span>${translations[currentLang]['form.sending']}</span>`;
+    if (status) { status.className = 'form-status'; status.textContent = ''; }
+    btn.innerHTML = `<span>${t('form.sending', 'Sending…')}</span>`;
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.innerHTML = `<span>${translations[currentLang]['form.sent']}</span>`;
-      btn.style.background = '#1a6fa8';
-      form.reset();
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', body: new FormData(form) });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success) {
+        btn.innerHTML = `<span>${t('form.sent', 'Message Sent ✓')}</span>`;
+        btn.style.background = '#1a6fa8';
+        if (status) { status.className = 'form-status success'; status.textContent = t('form.sent', 'Message Sent ✓'); }
+        form.reset();
+      } else {
+        throw new Error(data.message || 'send_failed');
+      }
+    } catch (err) {
+      btn.innerHTML = originalHTML;
+      btn.disabled = false;
+      if (status) { status.className = 'form-status error'; status.textContent = '⚠ ' + (err.message === 'send_failed' ? t('form.error', 'Could not send. Please try again.') : err.message); }
+      return;
+    }
 
-      setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.style.background = '';
-        btn.disabled = false;
-      }, 3500);
-    }, 1200);
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.style.background = '';
+      btn.disabled = false;
+      if (status) { status.className = 'form-status'; status.textContent = ''; }
+    }, 3500);
   });
 }
 
