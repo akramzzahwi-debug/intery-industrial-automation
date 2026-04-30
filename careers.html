@@ -311,7 +311,6 @@
   <div class="navbar">
     <a href="index.html" class="navbar-brand">
       <img src="img/logo-transparent.png" alt="INTERY" class="navbar-logo-img">
-      <span class="brand-text">INTERY</span>
     </a>
     <ul class="navbar-nav" id="navbarNav">
       <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
@@ -321,8 +320,8 @@
       <li class="nav-item"><a href="careers.html" class="nav-link active" data-i18n="nav.careers">Careers</a></li>
       <li class="nav-item"><a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
       <li class="nav-item">
-        <a href="tel:+38640122349" class="nav-phone">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.75-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="nav-phone-num">+386 40 122 349</span></a>
+        <a href="tel:+38640519789" class="nav-phone">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .67h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.75-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="nav-phone-num">+386 40 519 789</span></a>
       </li>
       <li class="nav-item"><a href="#apply" class="cta-button" data-i18n="nav.apply_now">Apply Now</a></li>
     </ul>
@@ -351,7 +350,6 @@
   <div class="mobile-menu-header">
     <a href="index.html" class="mobile-menu-brand">
       <img src="img/logo-transparent.png" alt="INTERY" class="navbar-logo-img">
-      <span class="brand-text">INTERY</span>
     </a>
     <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close">×</button>
   </div>
@@ -379,7 +377,7 @@
   </div>
   <div class="mobile-cta">
     <a href="#apply" class="mobile-cta-button" data-i18n="nav.apply_now">Apply Now</a>
-    <a href="tel:+38640122349" class="mobile-phone-link">+386 40 122 349</a>
+    <a href="tel:+38640519789" class="mobile-phone-link">+386 40 519 789</a>
   </div>
 </div>
 
@@ -630,7 +628,7 @@
       <div class="apply-info">
         <h2 data-i18n="apply.title">Submit Your <em>Application</em></h2>
         <p data-i18n="apply.desc1">Tell us about yourself and your experience. We review every application and respond within 3 business days for active openings.</p>
-        <p data-i18n="apply.desc2">For questions about open positions, contact us directly at <a href="mailto:info@intery-si.com" style="color:#38bdf8;">info@intery-si.com</a> or call <a href="tel:+38640122349" style="color:#38bdf8;">+386 40 122 349</a>.</p>
+        <p data-i18n="apply.desc2">For questions about open positions, contact us directly at <a href="mailto:info@intery-si.com" style="color:#38bdf8;">info@intery-si.com</a> or call <a href="tel:+38640519789" style="color:#38bdf8;">+386 40 519 789</a>.</p>
         <ul class="apply-features">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -654,6 +652,7 @@
       <div class="apply-form-wrapper">
         <form class="apply-form" id="applicationForm" action="/api/contact" method="POST" enctype="multipart/form-data" novalidate>
           <input type="hidden" name="_type" value="application">
+          <input type="hidden" name="language" id="application-language" value="en">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" aria-hidden="true">
 
           <div class="apply-form-row">
@@ -800,7 +799,7 @@
         </ul>
         <h4 style="margin-top:2rem;" data-i18n="footer.contact_h">Contact</h4>
         <ul>
-          <li><a href="tel:+38640122349">+386 40 122 349</a></li>
+          <li><a href="tel:+38640519789">+386 40 519 789</a></li>
           <li><a href="mailto:info@intery-si.com">info@intery-si.com</a></li>
           <li>Rimska ulica 4</li>
           <li>Slovenska Bistrica 2310</li>
@@ -880,6 +879,9 @@ form?.addEventListener('submit', async (e) => {
   formStatus.className = 'form-status';
   formStatus.textContent = '';
 
+  const langInput = document.getElementById('application-language');
+  if (langInput) langInput.value = document.documentElement.lang || 'en';
+
   const formData = new FormData(form);
 
   try {
@@ -908,5 +910,8 @@ form?.addEventListener('submit', async (e) => {
 <script src="js/careers-i18n.js"></script>
 <script src="js/cookies.js"></script>
 
+<a href="https://wa.me/38640519789?text=Hello%20INTERY%2C%20I%27d%20like%20more%20information." class="wa-fab" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" data-i18n-aria="wa.aria">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.01zm-7.01 15.24h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43-.14 0-.31-.02-.48-.02-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.88 2.4 1.01 2.56.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
 </body>
 </html>
